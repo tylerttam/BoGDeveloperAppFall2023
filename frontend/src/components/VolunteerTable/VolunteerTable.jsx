@@ -158,7 +158,8 @@ export const VolunteerTable = ({ isAdmin, manageRowData }) => {
         return (
             <div style={{ height: '100%', width: '100%' }}>
                 <button onClick={addRandomUser}>Add New User</button>
-                <span> *You can add the user's information using the 'Edit' button!</span>
+                <span> *You can add the user's information using the 'Edit' button!
+                    ALSO (delete 'admin/' from the end of the url to go to viewer mode)</span>
                 <AgGridReact
                     onRowEditingStopped={onRowEditingStopped}
                     onRowEditingStarted={onRowEditingStarted}
@@ -199,6 +200,7 @@ export const VolunteerTable = ({ isAdmin, manageRowData }) => {
     } else {
         return (
             <div style={{ height: '100%', width: '100%' }}>
+                <span>(add '/admin/' to the end of the url to enter admin mode)</span>
                 <AgGridReact
                     onRowEditingStopped={onRowEditingStopped}
                     onRowEditingStarted={onRowEditingStarted}
